@@ -162,3 +162,366 @@
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-x n") 'display-line-numbers-mode)
 #+END_SRC
+
+* Packages
+
+** auto-package-update
+
+#+BEGIN_SRC emacs-lisp
+  (use-package auto-package-update
+    :ensure t
+    :if (not (daemonp))
+    :custom
+    (auto-package-update-interval 7) ;; in days
+    (auto-package-update-prompt-before-update t)
+    (auto-package-update-delete-old-versions t)
+    (auto-package-update-hide-results t)
+    :config
+    (auto-package-update-maybe))
+#+END_SRC
+
+** evil
+
+#+BEGIN_SRC emacs-lisp
+  (use-package evil
+    :ensure t
+    :init (setq evil-want-keybinding nil)
+    :config (evil-mode t))
+#+END_SRC
+
+** doom-themes
+
+#+BEGIN_SRC emacs-lisp
+  (use-package doom-themes
+    :ensure t
+    :config
+    (load-theme 'doom-monokai-spectrum t)
+    (fringe-mode '4)
+    (setq ring-bell-function 'doom-themes-visual-bell-fn)
+    (setq doom-themes-treemacs-theme "doom-colors")
+    (doom-themes-treemacs-config)
+    (doom-themes-org-config))
+#+END_SRC
+
+** doom-modeline
+
+#+BEGIN_SRC emacs-lisp
+  (use-package doom-modeline
+    :ensure t
+    :hook (after-init . doom-modeline-mode)
+    :config
+    (setq inhibit-compacting-font-caches t)
+    (setq doom-modeline-buffer-file-name-style 'buffer-name)
+    (setq doom-modeline-modal-icon nil))
+#+END_SRC
+
+** org-bullets
+
+#+BEGIN_SRC emacs-lisp
+  (use-package org-bullets
+    :ensure t
+    :hook (org-mode . org-bullets-mode))
+#+END_SRC
+
+** magit
+
+#+BEGIN_SRC emacs-lisp
+  (use-package magit
+    :ensure t)
+#+END_SRC
+
+** diff-hl
+
+#+BEGIN_SRC emacs-lisp
+  (use-package diff-hl
+    :ensure t
+    :config (global-diff-hl-mode t))
+#+END_SRC
+
+** company
+
+#+BEGIN_SRC emacs-lisp
+  (use-package company
+    :ensure t
+    :init (add-hook 'after-init-hook #'global-company-mode)
+    :config (setq company-idle-delay 0))
+#+END_SRC
+
+** company-box
+
+Credit: https://github.com/hlissner/doom-emacs/blob/develop/modules/completion/company/config.el
+
+Modifications and a few bugfixes were done by me.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package company-box
+    :ensure t
+    :hook (company-mode . company-box-mode)
+    :config
+    (define-key company-box-mode-map [remap company-select-next] 'company-select-next)
+    (define-key company-box-mode-map [remap company-select-next-or-abort] 'company-select-next-or-abort)
+    (define-key company-box-mode-map [remap company-select-previous] 'company-select-previous)
+    (define-key company-box-mode-map [remap company-select-previous-or-abort] 'company-select-previous-or-abort)
+    (setq company-box-show-single-candidate t
+          company-box-backends-colors nil
+          company-box-max-candidates 50
+          company-box-icons-alist 'company-box-icons-all-the-icons
+          company-box-icons-functions
+          (cons #'+company-box-icons--elisp-fn
+                (delq 'company-box-icons--elisp
+                      company-box-icons-functions))
+          company-box-icons-all-the-icons
+          (let ((all-the-icons-scale-factor 0.8))
+            `((Unknown       . ,(all-the-icons-material "find_in_page"             :face 'all-the-icons-purple))
+              (Text          . ,(all-the-icons-material "text_fields"              :face 'all-the-icons-green))
+              (Method        . ,(all-the-icons-material "functions"                :face 'all-the-icons-red))
+              (Function      . ,(all-the-icons-material "functions"                :face 'all-the-icons-red))
+              (Constructor   . ,(all-the-icons-material "functions"                :face 'all-the-icons-red))
+              (Field         . ,(all-the-icons-material "functions"                :face 'all-the-icons-red))
+              (Variable      . ,(all-the-icons-material "adjust"                   :face 'all-the-icons-blue))
+              (Class         . ,(all-the-icons-material "class"                    :face 'all-the-icons-red))
+              (Interface     . ,(all-the-icons-material "settings_input_component" :face 'all-the-icons-red))
+              (Module        . ,(all-the-icons-material "view_module"              :face 'all-the-icons-red))
+              (Property      . ,(all-the-icons-material "settings"                 :face 'all-the-icons-red))
+              (Unit          . ,(all-the-icons-material "straighten"               :face 'all-the-icons-red))
+              (Value         . ,(all-the-icons-material "filter_1"                 :face 'all-the-icons-red))
+              (Enum          . ,(all-the-icons-material "plus_one"                 :face 'all-the-icons-red))
+              (Keyword       . ,(all-the-icons-material "filter_center_focus"      :face 'all-the-icons-red))
+              (Snippet       . ,(all-the-icons-material "short_text"               :face 'all-the-icons-red))
+              (Color         . ,(all-the-icons-material "color_lens"               :face 'all-the-icons-red))
+              (File          . ,(all-the-icons-material "insert_drive_file"        :face 'all-the-icons-red))
+              (Reference     . ,(all-the-icons-material "collections_bookmark"     :face 'all-the-icons-red))
+              (Folder        . ,(all-the-icons-material "folder"                   :face 'all-the-icons-red))
+              (EnumMember    . ,(all-the-icons-material "people"                   :face 'all-the-icons-red))
+              (Constant      . ,(all-the-icons-material "pause_circle_filled"      :face 'all-the-icons-red))
+              (Struct        . ,(all-the-icons-material "streetview"               :face 'all-the-icons-red))
+              (Event         . ,(all-the-icons-material "event"                    :face 'all-the-icons-red))
+              (Operator      . ,(all-the-icons-material "control_point"            :face 'all-the-icons-red))
+              (TypeParameter . ,(all-the-icons-material "class"                    :face 'all-the-icons-red))
+              (Template      . ,(all-the-icons-material "short_text"               :face 'all-the-icons-green))
+              (ElispFunction . ,(all-the-icons-material "functions"                :face 'all-the-icons-red))
+              (ElispVariable . ,(all-the-icons-material "check_circle"             :face 'all-the-icons-blue))
+              (ElispFeature  . ,(all-the-icons-material "stars"                    :face 'all-the-icons-orange))
+              (ElispFace     . ,(all-the-icons-material "format_paint"             :face 'all-the-icons-pink)))))
+
+    (defun +company-box-icons--elisp-fn (candidate)
+      (when (derived-mode-p 'emacs-lisp-mode)
+        (let ((sym (intern candidate)))
+          (cond ((fboundp sym)  'ElispFunction)
+                ((boundp sym)   'ElispVariable)
+                ((featurep sym) 'ElispFeature)
+                ((facep sym)    'ElispFace))))))
+#+END_SRC
+
+** flycheck
+
+#+BEGIN_SRC emacs-lisp
+  (use-package flycheck
+    :ensure t
+    :init (add-hook 'after-init-hook #'global-flycheck-mode))
+#+END_SRC
+
+** rainbow-delimiters
+
+#+BEGIN_SRC emacs-lisp
+  (use-package rainbow-delimiters
+    :ensure t
+    :hook ((emacs-lisp-mode . rainbow-delimiters-mode-enable)))
+#+END_SRC
+
+** treemacs
+
+#+BEGIN_SRC emacs-lisp
+  (use-package treemacs
+    :ensure t
+    :bind ("C-x t" . 'treemacs))
+#+END_SRC
+
+** lsp-mode
+
+#+BEGIN_SRC emacs-lisp
+  (use-package lsp-mode
+    :ensure t
+    :hook (prog-mode . lsp))
+#+END_SRC
+
+** lsp-ui
+
+#+BEGIN_SRC emacs-lisp
+  (use-package lsp-ui
+    :ensure t)
+#+END_SRC
+
+** company-lsp
+
+#+BEGIN_SRC emacs-lisp
+  (use-package company-lsp
+    :ensure t)
+#+END_SRC
+
+** web-mode
+
+#+BEGIN_SRC emacs-lisp
+  (use-package web-mode
+    :ensure t
+    :init
+    (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+    (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
+    (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode)))
+#+END_SRC
+
+** emmet-mode
+
+#+BEGIN_SRC emacs-lisp
+  (use-package emmet-mode
+    :ensure t
+    :hook (web-mode . emmet-mode))
+#+END_SRC
+
+** highlight-indent-guides
+
+#+BEGIN_SRC emacs-lisp
+  (use-package highlight-indent-guides
+    :ensure t
+    :config
+    (setq highlight-indent-guides-method 'character)
+    (setq highlight-indent-guides-responsive 'top)
+    (setq highlight-indent-guides-delay 0)
+    :hook (prog-mode . highlight-indent-guides-mode))
+#+END_SRC
+
+** ivy
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ivy
+    :ensure t
+    :diminish ivy-mode
+    :config (ivy-mode t))
+#+END_SRC
+
+** counsel
+
+#+BEGIN_SRC emacs-lisp
+  (use-package counsel
+    :ensure t
+    :after ivy
+    :demand t
+    :bind
+    (("C-c C-r" . ivy-resume)
+     ("C-x b" . ivy-switch-buffer)
+     ("C-x C-f" . counsel-find-file)
+     ("C-h f" . counsel-describe-function)
+     ("C-h v" . counsel-describe-variable)
+     ("C-c g" . counsel-git)
+     ("C-c j" . counsel-git-grep)
+     ("M-x" . counsel-M-x)
+     :map counsel-find-file-map
+     ("<left>" . counsel-up-directory)))
+#+END_SRC
+
+** ivy-rich
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ivy-rich
+    :ensure t
+    :after (ivy counsel)
+
+    :preface
+    (eval-when-compile
+      (defvar ivy-rich-path-style)
+      (declare-function ivy-rich-mode nil))
+
+    :init
+    (setq ivy-rich-path-style 'abbrev)
+
+    :config
+    (ivy-rich-mode t))
+#+END_SRC
+
+** swiper
+
+#+BEGIN_SRC emacs-lisp
+  (use-package swiper
+    :ensure t
+    :bind ("\C-s" . swiper))
+#+END_SRC
+
+** all-the-icons-ivy-rich
+
+#+BEGIN_SRC emacs-lisp
+  (use-package all-the-icons-ivy-rich
+    :ensure t
+    :init (all-the-icons-ivy-rich-mode 1))
+#+END_SRC
+
+** ace-window
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ace-window
+    :ensure t
+    :bind ("M-o" . ace-window))
+#+END_SRC
+
+** solaire-mode
+
+#+BEGIN_SRC emacs-lisp
+  (use-package solaire-mode
+    :ensure t
+    :hook
+    ((change-major-mode after-revert ediff-prepare-buffer) . turn-on-solaire-mode)
+    (minibuffer-setup . solaire-mode-in-minibuffer)
+    :config
+    (setq solaire-mode-remap-fringe nil)
+    (solaire-global-mode +1))
+#+END_SRC
+
+** dashboard
+
+#+BEGIN_SRC emacs-lisp
+  (use-package dashboard
+    :ensure t
+    :config
+    (dashboard-setup-startup-hook)
+    (setq dashboard-startup-banner 'logo)
+    (setq dashboard-center-content t)
+    (setq dashboard-set-heading-icons t)
+    (setq dashboard-set-file-icons t)
+    (setq dashboard-page-separator "\n\n\n\n")
+    (setq dashboard-items '((recents  . 5)
+                            (bookmarks . 5)
+                            (agenda . 5)
+                            (registers . 5))))
+#+END_SRC
+
+** aggressive-indent
+
+#+BEGIN_SRC emacs-lisp
+  (use-package aggressive-indent
+    :ensure t
+    :hook (prog-mode . aggressive-indent-mode))
+#+END_SRC
+
+** all-the-icons-dired
+
+#+BEGIN_SRC emacs-lisp
+  (use-package all-the-icons-dired
+    :ensure t
+    :hook (dired-mode . all-the-icons-dired-mode))
+#+END_SRC
+
+** smex
+
+#+BEGIN_SRC emacs-lisp
+  (use-package smex
+    :ensure t
+    :init (smex-initialize))
+#+END_SRC
+
+** yaml-mode
+
+#+BEGIN_SRC emacs-lisp
+  (use-package yaml-mode
+    :ensure t
+    :init (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
+#+END_SRC
+
