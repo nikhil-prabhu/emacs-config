@@ -7,6 +7,9 @@
 * Initial Settings
 
 ** Emacs Settings
+   
+   # This section contains settings that generally modify the overall
+   # look and feel of Emacs, and other miscellaneous settings.
 
 *** User information
 
@@ -16,4 +19,103 @@
    (setq user-mail-address "nikhilprabhu00@gmail.com")
 
     #+END_SRC
+
+*** User interface settings
+
+
+**** Always start Emacs maximized
+
+     #+BEGIN_SRC emacs-lisp
+
+  (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+     #+END_SRC
+
+**** Word wrap
+
+     #+BEGIN_SRC emacs-lisp
+
+  (global-visual-line-mode t)
+
+     #+END_SRC
+
+**** Highlight lines
+
+     #+BEGIN_SRC emacs-lisp
+
+  (global-hl-line-mode t)
+
+     #+END_SRC
+
+**** Disable scrollbar
+
+     #+BEGIN_SRC emacs-lisp
+
+  (scroll-bar-mode -1)
+
+     #+END_SRC
+
+**** Disable toolbar
+
+     #+BEGIN_SRC emacs-lisp
+
+  (tool-bar-mode -1)
+
+     #+END_SRC
+
+**** Disable menubar
+
+     #+BEGIN_SRC emacs-lisp
+
+  (menu-bar-mode -1)
+
+     #+END_SRC
+
+**** Disable ring bell
+
+     #+BEGIN_SRC emacs-lisp
+
+  (setq ring-bell-function 'ignore)
+
+     #+END_SRC
+
+**** Prettify symbols
+
+     #+BEGIN_SRC emacs-lisp
+
+  (add-hook 'after-init-hook #'global-prettify-symbols-mode)
+
+     #+END_SRC
+
+**** Line numbers for programming languages and Org
+
+     #+BEGIN_SRC emacs-lisp
+
+  (when (version<= "26.0.50" emacs-version)
+    (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+    (add-hook 'org-mode-hook 'display-line-numbers-mode))
+
+     #+END_SRC
+
+**** Pair matching
+
+     #+BEGIN_SRC emacs-lisp
+  (electric-pair-mode t)
+     #+END_SRC
+
+**** Custom frame title format
+
+     #+BEGIN_SRC emacs-lisp
+  (setq-default frame-title-format '("%b [%m] - GNU Emacs"))
+     #+END_SRC
+
+
+*** Major mode settings
+
+**** Use cperl-mode for Perl scripts
+
+     #+BEGIN_SRC emacs-lisp
+       (defalias 'perl-mode 'cperl-mode)
+     #+END_SRC
+     
 
