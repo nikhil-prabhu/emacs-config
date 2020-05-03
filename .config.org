@@ -1,0 +1,5 @@
+# -*- mode: org; coding: utf-8; -*-
+#+STARTUP: indent
+#+TITLE: Nikhil Prabhu's Custom Emacs Configuration
+#+AUTHOR: Nikhil Prabhu
+#+EMAIL: nikhilprabhu00@gmail.com
