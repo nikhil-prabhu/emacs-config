@@ -488,7 +488,7 @@ Modifications and a few bugfixes were done by me.
     :config
     (dashboard-setup-startup-hook)
     (setq dashboard-startup-banner 'logo)
-    (setq dashboard-banner-logo-title "Hi, Nikhil. Welcome to Emacs.")
+    (setq dashboard-banner-logo-title "Hi, Nikhil. Welcome to Emacs!")
     (setq dashboard-center-content t)
     (setq dashboard-set-heading-icons t)
     (setq dashboard-set-file-icons t)
