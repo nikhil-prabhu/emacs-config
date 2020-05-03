@@ -137,3 +137,28 @@
 #+END_SRC
 
 
+* Custom Keybindings
+
+** Revert buffer without confirmation
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-c r") 'revert-buffer-no-confirm)
+#+END_SRC
+
+** Open a shell buffer
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-x s") 'shell)
+#+END_SRC
+
+** Clear shell buffer
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-c l") 'comint-clear-buffer)
+#+END_SRC
+
+** Display line numbers
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-x n") 'display-line-numbers-mode)
+#+END_SRC
