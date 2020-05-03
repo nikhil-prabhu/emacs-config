@@ -3,3 +3,17 @@
 #+TITLE: Nikhil Prabhu's Custom Emacs Configuration
 #+AUTHOR: Nikhil Prabhu
 #+EMAIL: nikhilprabhu00@gmail.com
+
+* Initial Settings
+
+** Emacs Settings
+
+*** User information
+
+    #+BEGIN_SRC emacs-lisp
+
+   (setq user-full-name "Nikhil Prabhu")
+   (setq user-mail-address "nikhilprabhu00@gmail.com")
+
+    #+END_SRC
+
