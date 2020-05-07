@@ -38,36 +38,36 @@
   
   The following table contains the names of packages that are used in this configuration.
 
-  | Package Name            | Use                                                      |
-  |-------------------------+----------------------------------------------------------|
-  | auto-package-update     | Automatically update packages.                           |
-  | evil                    | Vim keybindings in Emacs.                                |
-  | doom-themes             | A curated list of themes used in Doom Emacs.             |
-  | doom-modeline           | Custom modeline used in Doom Emacs.                      |
-  | org-bullets             | Use fancy symbolic bullets in Org-mode.                  |
-  | magit                   | Powerful Git integration for Emacs.                      |
-  | diff-hl                 | Highlight diff information in Git project buffer.        |
-  | company                 | Autocompletion.                                          |
-  | company-box             | Display icons for autocomplete candidates.               |
-  | flycheck                | On-the-fly syntax checking.                              |
-  | rainbow-delimiters      | Use different colors for each level of brackets in Lisp. |
-  | treemacs                | Project directory tree.                                  |
-  | lsp-mode                | Language Sever Protocol for Emacs.                       |
-  | lsp-ui                  | UI modules for lsp-mode.                                 |
-  | company-lsp             | Language Server Protocol integration for company.        |
-  | web-mode                | A major mode for working with web based languages.       |
-  | emmet-mode              | Unofficial Emmet support for Emacs.                      |
-  | highlight-indent-guides | Display indent guides in programming buffers.            |
-  | ivy                     | Interactive minibuffer completion framework.             |
-  | counsel                 | Various completion functions using Ivy.                  |
-  | ivy-rich                | Better display for Ivy.                                  |
-  | swiper                  | Improved 'isearch' utility.                              |
-  | all-the-icons-ivy-rich  | Icons for Ivy.                                           |
-  | ace-window              | Quickly switch between windows.                          |
-  | solaire-mode            | Make certain buffers darker or lighter.                  |
-  | dashboard               | Spacemacs based dashboard for Emacs.                     |
-  | aggressive-indent       | Always keep code indented.                               |
-  | all-the-icons-dired     | Icons for dired buffer elements.                         |
-  | smex                    | M-x interface with fuzzy matching.                       |
-  | yaml-mode               | Major mode for editing YAML files.                       |
-  | projectile              | Manage and navigate projects in Emacs easily.            |
+  | Package Name            | Description                                              | Repository |
+  |-------------------------+----------------------------------------------------------+------------|
+  | auto-package-update     | Automatically update packages.                           | [[https://melpa.org/#/auto-package-update][MELPA]]      |
+  | evil                    | Vim keybindings in Emacs.                                | [[https://melpa.org/#/evil][MELPA]]      |
+  | doom-themes             | A curated list of themes used in Doom Emacs.             | [[https://melpa.org/#/doom-themes][MELPA]]      |
+  | doom-modeline           | Custom modeline used in Doom Emacs.                      | [[https://melpa.org/#/doom-modeline][MELPA]]      |
+  | org-bullets             | Use fancy symbolic bullets in Org-mode.                  | [[https://melpa.org/#/org-bullets][MELPA]]      |
+  | magit                   | Powerful Git integration for Emacs.                      | [[https://melpa.org/#/magit][MELPA]]      |
+  | diff-hl                 | Highlight diff information in Git project buffer.        | [[https://melpa.org/#/diff-hl][MELPA]]      |
+  | company                 | Autocompletion.                                          | [[https://melpa.org/#/company][MELPA]]      |
+  | company-box             | Display icons for autocomplete candidates.               | [[https://melpa.org/#/company-box][MELPA]]      |
+  | flycheck                | On-the-fly syntax checking.                              | [[https://melpa.org/#/flycheck][MELPA]]      |
+  | rainbow-delimiters      | Use different colors for each level of brackets in Lisp. | [[https://melpa.org/#/rainbow-delimiters][MELPA]]      |
+  | treemacs                | Project directory tree.                                  | [[https://melpa.org/#/rainbow-delimiters][MELPA]]      |
+  | lsp-mode                | Language Sever Protocol for Emacs.                       | [[https://melpa.org/#/lsp-mode][MELPA]]      |
+  | lsp-ui                  | UI modules for lsp-mode.                                 | [[https://melpa.org/#/lsp-ui][MELPA]]      |
+  | company-lsp             | Language Server Protocol integration for company.        | [[https://melpa.org/#/company-lsp][MELPA]]      |
+  | web-mode                | A major mode for working with web based languages.       | [[https://melpa.org/#/web-mode][MELPA]]      |
+  | emmet-mode              | Unofficial Emmet support for Emacs.                      | [[https://melpa.org/#/emmet-mode][MELPA]]      |
+  | highlight-indent-guides | Display indent guides in programming buffers.            | [[https://melpa.org/#/highlight-indent-guides][MELPA]]      |
+  | ivy                     | Interactive minibuffer completion framework.             | [[https://melpa.org/#/ivy][MELPA]]      |
+  | counsel                 | Various completion functions using Ivy.                  | [[https://melpa.org/#/counsel][MELPA]]      |
+  | ivy-rich                | Better display for Ivy.                                  | [[https://melpa.org/#/ivy-rich][MELPA]]      |
+  | swiper                  | Improved 'isearch' utility.                              | [[https://melpa.org/#/swiper][MELPA]]      |
+  | all-the-icons-ivy-rich  | Icons for Ivy.                                           | [[https://melpa.org/#/all-the-icons-ivy-rich][MELPA]]      |
+  | ace-window              | Quickly switch between windows.                          | [[https://melpa.org/#/ace-window][MELPA]]      |
+  | solaire-mode            | Make certain buffers darker or lighter.                  | [[https://melpa.org/#/solaire-mode][MELPA]]      |
+  | dashboard               | Spacemacs based dashboard for Emacs.                     | [[https://melpa.org/#/dashboard][MELPA]]      |
+  | aggressive-indent       | Always keep code indented.                               | [[https://melpa.org/#/aggressive-indent][MELPA]]      |
+  | all-the-icons-dired     | Icons for dired buffer elements.                         | [[https://melpa.org/#/all-the-icons-dired][MELPA]]      |
+  | smex                    | M-x interface with fuzzy matching.                       | [[https://melpa.org/#/smex][MELPA]]      |
+  | yaml-mode               | Major mode for editing YAML files.                       | [[https://melpa.org/#/yaml-mode][MELPA]]      |
+  | projectile              | Manage and navigate projects in Emacs easily.            | [[https://melpa.org/#/projectile][MELPA]]      |
