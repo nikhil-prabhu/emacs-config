@@ -453,12 +453,12 @@ Modifications and a few bugfixes were done by me.
     (ivy-rich-mode t))
 #+END_SRC
 
-** swiper
+** ctrlf
 
 #+BEGIN_SRC emacs-lisp
-  (use-package swiper
+  (use-package ctrlf
     :ensure t
-    :bind ("\C-s" . swiper))
+    :init (ctrlf-mode +1))
 #+END_SRC
 
 ** all-the-icons-ivy-rich
