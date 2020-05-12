@@ -487,6 +487,7 @@ Modifications and a few bugfixes were done by me.
     (minibuffer-setup . solaire-mode-in-minibuffer)
     :config
     (setq solaire-mode-remap-fringe -1)
+    (solaire-mode-swap-bg)
     (solaire-global-mode +1))
 #+END_SRC
 
