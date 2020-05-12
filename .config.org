@@ -201,7 +201,6 @@
     :ensure t
     :config
     (load-theme 'doom-monokai-spectrum t)
-    (fringe-mode '4)
     (setq ring-bell-function 'doom-themes-visual-bell-fn)
     (setq doom-themes-treemacs-theme "doom-colors")
     (doom-themes-treemacs-config)
@@ -476,7 +475,7 @@ Modifications and a few bugfixes were done by me.
     ((change-major-mode after-revert ediff-prepare-buffer) . turn-on-solaire-mode)
     (minibuffer-setup . solaire-mode-in-minibuffer)
     :config
-    (setq solaire-mode-remap-fringe nil)
+    (setq solaire-mode-remap-fringe -1)
     (solaire-global-mode +1))
 #+END_SRC
 
