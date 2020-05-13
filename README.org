@@ -9,7 +9,7 @@
   This configuration is free to use, modify and/or redistribute under the terms mentioned in the GNU General Public License v2.0.
   
   *NOTE:* 
-  - I primarily use UNIX based operating systems (GNU/Linux, BSD, macOS, etc.) for my work. So while this configuration may also work on Windows, I can't guarantee it.
+  - I primarily use UNIX based operating systems (GNU/Linux, BSD, macOS, etc.) for my work. So while this configuration may also work on Windows, I can't guarantee it. (For a more minimal configuration that does work on Windows, check out my other [[https://github.com/nikhil-prabhu/emacs-config-windows][repository]])
   - This configuration is optimized for GNU Emacs version 26.x and above. It may not work with versions older than 24.x.
 
 * Installation
@@ -71,3 +71,4 @@
   | smex                    | M-x interface with fuzzy matching.                       | [[https://melpa.org/#/smex][MELPA]]      |
   | yaml-mode               | Major mode for editing YAML files.                       | [[https://melpa.org/#/yaml-mode][MELPA]]      |
   | projectile              | Manage and navigate projects in Emacs easily.            | [[https://melpa.org/#/projectile][MELPA]]      |
+  
