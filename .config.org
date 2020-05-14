@@ -510,14 +510,6 @@ Modifications and a few bugfixes were done by me.
                             (registers . 5))))
 #+END_SRC
 
-** aggressive-indent
-
-#+BEGIN_SRC emacs-lisp
-  (use-package aggressive-indent
-    :ensure t
-    :hook (prog-mode . aggressive-indent-mode))
-#+END_SRC
-
 ** all-the-icons-dired
 
 #+BEGIN_SRC emacs-lisp
