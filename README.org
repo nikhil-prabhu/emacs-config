@@ -46,6 +46,7 @@
   | doom-modeline           | Custom modeline used in Doom Emacs.                      | [[https://melpa.org/#/doom-modeline][MELPA]]      |
   | org-bullets             | Use fancy symbolic bullets in Org-mode.                  | [[https://melpa.org/#/org-bullets][MELPA]]      |
   | magit                   | Powerful Git integration for Emacs.                      | [[https://melpa.org/#/magit][MELPA]]      |
+  | forge                   | Work with Git forges from the comfort of Magit.          | [[https://melpa.org/#/forge][MELPA]]      |
   | diff-hl                 | Highlight diff information in Git project buffer.        | [[https://melpa.org/#/diff-hl][MELPA]]      |
   | company                 | Autocompletion.                                          | [[https://melpa.org/#/company][MELPA]]      |
   | company-box             | Display icons for autocomplete candidates.               | [[https://melpa.org/#/company-box][MELPA]]      |
