@@ -66,7 +66,6 @@
   | ace-window              | Quickly switch between windows.                          | [[https://melpa.org/#/ace-window][MELPA]]      |
   | solaire-mode            | Make certain buffers darker or lighter.                  | [[https://melpa.org/#/solaire-mode][MELPA]]      |
   | dashboard               | Spacemacs based dashboard for Emacs.                     | [[https://melpa.org/#/dashboard][MELPA]]      |
-  | aggressive-indent       | Always keep code indented.                               | [[https://melpa.org/#/aggressive-indent][MELPA]]      |
   | all-the-icons-dired     | Icons for dired buffer elements.                         | [[https://melpa.org/#/all-the-icons-dired][MELPA]]      |
   | smex                    | M-x interface with fuzzy matching.                       | [[https://melpa.org/#/smex][MELPA]]      |
   | yaml-mode               | Major mode for editing YAML files.                       | [[https://melpa.org/#/yaml-mode][MELPA]]      |
