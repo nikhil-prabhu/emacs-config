@@ -567,3 +567,11 @@ Modifications and a few bugfixes were done by me.
     (elpy-enable))
 #+END_SRC
 
+** blacken
+
+#+BEGIN_SRC emacs-lisp
+  (use-package blacken
+    :ensure t
+    :hook (python-mode . blacken-mode))
+#+END_SRC
+
