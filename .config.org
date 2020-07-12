@@ -194,17 +194,6 @@
     :config (evil-mode t))
 #+END_SRC
 
-** circadian
-
-#+BEGIN_SRC emacs-lisp
-  (use-package circadian
-    :ensure t
-    :config
-    (setq circadian-themes '(("8:00" . doom-one-light)
-                             ("19:30" . doom-monokai-spectrum)))
-    (circadian-setup))
-#+END_SRC
-
 ** doom-themes
 
 #+BEGIN_SRC emacs-lisp
