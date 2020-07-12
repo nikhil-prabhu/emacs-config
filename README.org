@@ -74,4 +74,5 @@
   | ox-twbs                 | Bootstrap compatible HTML Back-End for Org.              | [[http://melpa.org/#/ox-twbs][MELPA]]      |
   | elpy                    | Emacs Python Development Environment.                    | [[http://melpa.org/#/elpy][MELPA]]      |
   | blacken                 | Reformat python buffers using the "black" formatter.     | [[http://melpa.org/#/blacken][MELPA]]      |
+  | select-themes           | Interactive theme selection.                             | [[https://melpa.org/#/select-themes][MELPA]]      |
   

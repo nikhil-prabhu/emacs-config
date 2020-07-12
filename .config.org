@@ -564,3 +564,9 @@ Modifications and a few bugfixes were done by me.
     :hook (python-mode . blacken-mode))
 #+END_SRC
 
+** select-themes
+
+#+BEGIN_SRC emacs-lisp
+  (use-package select-themes
+    :ensure t)
+#+END_SRC
