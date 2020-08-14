@@ -571,3 +571,10 @@ Modifications and a few bugfixes were done by me.
   (use-package select-themes
     :ensure t)
 #+END_SRC
+** browse-kill-ring
+
+#+BEGIN_SRC emacs-lisp
+  (use-package browse-kill-ring
+    :ensure t
+    :bind("C-c y" . browse-kill-ring))
+#+END_SRC
