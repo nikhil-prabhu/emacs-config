@@ -76,4 +76,5 @@
   | blacken                 | Reformat python buffers using the "black" formatter.     | [[http://melpa.org/#/blacken][MELPA]]      |
   | select-themes           | Interactive theme selection.                             | [[https://melpa.org/#/select-themes][MELPA]]      |
   | browse-kill-ring        | Interactively insert items from kill ring.               | [[https://melpa.org/#/browse-kill-ring][MELPA]]      |
+  | org-journal             | A simple org-mode based journaling mode.                 | [[https://melpa.org/#/org-journal][MELPA]]      |
   

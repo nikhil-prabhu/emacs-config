@@ -578,3 +578,9 @@ Modifications and a few bugfixes were done by me.
     :ensure t
     :bind("C-c y" . browse-kill-ring))
 #+END_SRC
+** org-journal
+
+#+BEGIN_SRC emacs-lisp
+  (use-package org-journal
+    :ensure t)
+#+END_SRC
