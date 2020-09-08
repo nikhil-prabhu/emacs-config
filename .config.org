@@ -200,7 +200,7 @@
   (use-package doom-themes
     :ensure t
     :config
-    (load-theme 'doom-monokai-classic t)
+    (load-theme 'doom-oceanic-next t)
     (setq ring-bell-function 'doom-themes-visual-bell-fn)
     (setq doom-themes-treemacs-theme "doom-colors")
     (doom-themes-treemacs-config)
@@ -425,7 +425,6 @@
     (minibuffer-setup . solaire-mode-in-minibuffer)
     :config
     (setq solaire-mode-remap-fringe -1)
-    (solaire-mode-swap-bg)
     (solaire-global-mode +1))
 #+END_SRC
 
