@@ -567,7 +567,6 @@
   ;; Font configuration for other Org elements
   (custom-theme-set-faces
    'user
-   '(variable-pitch ((t (:family "ETBembo" :height 150 :weight thin))))
    '(fixed-pitch ((t ( :family "Fira Code Retina" :height 120)))))
 
   (custom-theme-set-faces
