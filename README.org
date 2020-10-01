@@ -77,4 +77,5 @@
   | select-themes           | Interactive theme selection.                             | [[https://melpa.org/#/select-themes][MELPA]]      |
   | browse-kill-ring        | Interactively insert items from kill ring.               | [[https://melpa.org/#/browse-kill-ring][MELPA]]      |
   | org-journal             | A simple org-mode based journaling mode.                 | [[https://melpa.org/#/org-journal][MELPA]]      |
+  | go-mode                 | Emacs mode for editing Go code                           | [[https://melpa.org/#/go-mode][MELPA]]      |
   

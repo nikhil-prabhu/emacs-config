@@ -525,6 +525,13 @@
   (use-package org-journal
     :ensure t)
 #+END_SRC
+** golang
+
+#+BEGIN_SRC emacs-lisp
+  (use-package go-mode
+    :ensure t)
+#+END_SRC
+
 * Miscellaneous
 ** Beautify org-mode
 
