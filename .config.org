@@ -200,7 +200,7 @@
   (use-package doom-themes
     :ensure t
     :config
-    (load-theme 'doom-oceanic-next t)
+    (load-theme 'doom-Iosvkem t)
     (setq ring-bell-function 'doom-themes-visual-bell-fn)
     (setq doom-themes-treemacs-theme "doom-colors")
     (doom-themes-treemacs-config)
