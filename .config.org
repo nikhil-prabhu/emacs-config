@@ -537,6 +537,15 @@
   (use-package org-journal
     :ensure t)
 #+END_SRC
+** which-key
+
+#+BEGIN_SRC emacs-lisp
+  (use-package which-key
+    :ensure t
+    :config
+    (which-key-mode))
+#+END_SRC
+
 * Miscellaneous
 ** Beautify org-mode
 
