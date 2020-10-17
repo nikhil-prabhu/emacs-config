@@ -274,6 +274,16 @@
     :init (add-hook 'after-init-hook #'global-flycheck-mode))
 #+END_SRC
 
+** flycheck-posframe
+
+#+BEGIN_SRC emacs-lisp
+  (use-package flycheck-posframe
+    :ensure t
+    :after flycheck
+    :hook (flycheck-mode . flycheck-posframe-mode)
+    :config (flycheck-posframe-configure-pretty-defaults))
+#+END_SRC
+
 ** rainbow-delimiters
 
 #+BEGIN_SRC emacs-lisp
