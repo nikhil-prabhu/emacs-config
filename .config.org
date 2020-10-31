@@ -546,6 +546,14 @@
     (which-key-mode))
 #+END_SRC
 
+** smart-comment
+
+#+BEGIN_SRC emacs-lisp
+  (use-package smart-comment
+    :ensure t
+    :bind ("M-;" . smart-comment))
+#+END_SRC
+
 * Miscellaneous
 ** Beautify org-mode
 

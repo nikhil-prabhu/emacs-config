@@ -79,4 +79,5 @@
   | browse-kill-ring        | Interactively insert items from kill ring.               | [[https://melpa.org/#/browse-kill-ring][MELPA]]      |
   | org-journal             | A simple org-mode based journaling mode.                 | [[https://melpa.org/#/org-journal][MELPA]]      |
   | which-key               | Display keybindings for currently typed prefix.          | [[https://melpa.org/#/which-key][MELPA]]      |
+  | smart-comment           | Smarter commenting.                                      | [[https://melpa.org/#/smart-comment][MELPA]]      |
   
