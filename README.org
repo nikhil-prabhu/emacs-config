@@ -51,7 +51,6 @@
   | company                 | Autocompletion.                                          | [[https://melpa.org/#/company][MELPA]]      |
   | company-box             | Display icons for autocomplete candidates.               | [[https://melpa.org/#/company-box][MELPA]]      |
   | flycheck                | On-the-fly syntax checking.                              | [[https://melpa.org/#/flycheck][MELPA]]      |
-  | flycheck-posframe       | Display flycheck error messages via posframe.            | [[https://melpa.org/#/flycheck-posframe][MELPA]]      |
   | rainbow-delimiters      | Use different colors for each level of brackets in Lisp. | [[https://melpa.org/#/rainbow-delimiters][MELPA]]      |
   | treemacs                | Project directory tree.                                  | [[https://melpa.org/#/rainbow-delimiters][MELPA]]      |
   | lsp-mode                | Language Sever Protocol for Emacs.                       | [[https://melpa.org/#/lsp-mode][MELPA]]      |
