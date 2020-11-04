@@ -138,6 +138,18 @@
         (message (concat "Buffer " (buffer-name) " reloaded.")))))
 #+END_SRC
 
+** Indent entire buffer
+
+#+BEGIN_SRC emacs-lisp
+  (defun indent-buffer ()
+    "Indents an entire buffer using the default indentation scheme."
+    (interactive)
+    (save-excursion
+      (delete-trailing-whitespace)
+      (indent-region (point-min) (point-max) nil)
+      (untabify (point-min) (point-max))))
+#+END_SRC
+
 * Custom Keybindings
 
 # This section contains custom keybindings
@@ -604,3 +616,8 @@
 
 #+END_SRC
 
+** Indent buffer on save
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'before-save-hook 'indent-buffer)
+#+END_SRC
